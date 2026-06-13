@@ -1,0 +1,23 @@
+{
+  "categorical_features": [
+    "pet_species",
+    "weight_status",
+    "living_situation",
+    "exercise_level"
+  ],
+  "numerical_features": [
+    "age_years",
+    "conditions_count",
+    "allergies_count"
+  ],
+  "target": "health_risk_score",
+  "all_features": [
+    "pet_species",
+    "weight_status",
+    "living_situation",
+    "exercise_level",
+    "age_years",
+    "conditions_count",
+    "allergies_count"
+  ]
+}

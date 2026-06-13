@@ -1,0 +1,34 @@
+# PawCare+ — full stack (React frontend + FastAPI backend) via Docker.
+#
+#   cp .env.example .env   # then set OPENAI_API_KEY
+#   docker compose up --build
+#
+# Open http://localhost:8080  (frontend → nginx → proxies /api → backend:8000)
+
+services:
+  backend:
+    build:
+      context: ./backend
+    image: pawcare-backend
+    container_name: pawcare-backend
+    env_file:
+      - .env
+    environment:
+      # nginx proxies same-origin, so CORS is not strictly needed; kept for
+      # direct access to the API (e.g. http://localhost:8000/docs).
+      PAWCARE_CORS_ORIGINS: "http://localhost:8080,http://localhost:5173"
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./frontend
+    image: pawcare-frontend
+    container_name: pawcare-frontend
+    depends_on:
+      backend:
+        condition: service_healthy
+    ports:
+      - "8080:80"
+    restart: unless-stopped

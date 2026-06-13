@@ -1,0 +1,89 @@
+{
+  "status": "success",
+  "timestamp": "2026-03-24T20:47:16.754645",
+  "steps": {
+    "data_cleaning": {
+      "status": "success",
+      "health_risk_cleaning": {
+        "status": "success",
+        "input_file": "data/training_dataset\\pet_health_risk_training.csv",
+        "output_file": null,
+        "original_shape": null,
+        "cleaned_shape": null,
+        "removed_rows": 0
+      },
+      "care_capability_cleaning": {
+        "status": "success",
+        "input_file": "data/training_dataset\\owner_care_capability_training.csv",
+        "output_file": null,
+        "original_shape": null,
+        "cleaned_shape": null,
+        "removed_rows": 0
+      }
+    },
+    "model_training": {
+      "status": "success",
+      "health_risk_training": {
+        "status": "success",
+        "data_file": "data/processed\\pet_health_risk_clean.csv",
+        "metrics": {
+          "train": {
+            "r2": 0.6874213195962462,
+            "mae": 0.06190932557394726,
+            "rmse": 0.07766535607085367
+          },
+          "test": {
+            "r2": 0.6393812852819498,
+            "mae": 0.06721776000753595,
+            "rmse": 0.08481755472485426
+          }
+        },
+        "model_file": null,
+        "scaler_file": null,
+        "encoder_file": null
+      },
+      "care_capability_training": {
+        "status": "success",
+        "data_file": "data/processed\\owner_care_capability_clean.csv",
+        "metrics": {
+          "train": {
+            "r2": 0.5240559085021943,
+            "mae": 7.932621176397177,
+            "rmse": 9.84436322975824
+          },
+          "test": {
+            "r2": 0.5102805206605074,
+            "mae": 8.069853021751065,
+            "rmse": 10.02444683442208
+          }
+        },
+        "model_file": null,
+        "scaler_file": null,
+        "encoder_file": null
+      },
+      "output_directory": "ml/models"
+    },
+    "model_evaluation": {
+      "status": "success",
+      "evaluation_dir": "data/evaluation_dataset",
+      "model_dir": "ml/models",
+      "health_risk_evaluation": {},
+      "care_capability_evaluation": {},
+      "summary": {
+        "models_evaluated": [
+          "health_risk",
+          "care_capability"
+        ],
+        "overall_status": "success",
+        "comparison": {
+          "health_risk_r2": 0.1985938955730887,
+          "care_capability_r2": -0.0002289585406476391,
+          "better_model": "health_risk"
+        }
+      }
+    }
+  },
+  "message": "Pipeline completed successfully in 4.91 seconds",
+  "duration_seconds": 4.910108,
+  "completion_timestamp": "2026-03-24T20:47:21.664753"
+}

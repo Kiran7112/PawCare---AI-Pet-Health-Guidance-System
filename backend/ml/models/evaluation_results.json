@@ -1,0 +1,185 @@
+{
+  "models": {
+    "health_risk": {
+      "status": "success",
+      "test_samples": 5000,
+      "r2_score": 0.1985938955730887,
+      "mae": 0.2090756601699927,
+      "rmse": 0.25278360449793713,
+      "mse": 0.0638995507029695,
+      "additional_metrics": {
+        "error_distribution": {
+          "mean_error": -0.09659510026768588,
+          "std_error": 0.2336233149279001,
+          "min_error": -0.6099508926469553,
+          "max_error": 0.3982273395571588,
+          "percent_within_0_1": 0.2612,
+          "percent_within_0_2": 0.5264
+        },
+        "accuracy_by_risk_category": {
+          "Low Risk": {
+            "count": 1666,
+            "mae": 0.16132020721623289,
+            "rmse": 0.18557041826976417
+          },
+          "Moderate Risk": {
+            "count": 1666,
+            "mae": 0.11499058764517851,
+            "rmse": 0.14048593348301275
+          },
+          "High Risk": {
+            "count": 1668,
+            "mae": 0.35074611307605036,
+            "rmse": 0.37072590060832233
+          }
+        }
+      },
+      "feature_importance": {
+        "pet_species": 0.05250011877337062,
+        "weight_status": 0.42062851814084756,
+        "living_situation": 0.08485162416748034,
+        "exercise_level": 0.22658848086980554,
+        "age_years": 0.20498415100744444,
+        "conditions_count": 0.0,
+        "allergies_count": 0.010447107041051562
+      }
+    },
+    "care_capability": {
+      "status": "success",
+      "test_samples": 5000,
+      "r2_score": -0.0002289585406476391,
+      "mae": 25.018007607978536,
+      "rmse": 28.88879675970521,
+      "mse": 834.5625782235543,
+      "additional_metrics": {
+        "error_distribution": {
+          "mean_error": -0.43707721349111905,
+          "std_error": 28.88837914149712,
+          "min_error": -50.83935450993779,
+          "max_error": 49.10147900905518,
+          "percent_within_10": 0.2022,
+          "percent_within_20": 0.4018
+        },
+        "accuracy_by_capability_level": {
+          "Low Capability": {
+            "count": 1666,
+            "mae": 32.81687622998217,
+            "rmse": 34.19909756515091
+          },
+          "Medium Capability": {
+            "count": 1666,
+            "mae": 8.394455750266035,
+            "rmse": 9.621260339896766
+          },
+          "High Capability": {
+            "count": 1668,
+            "mae": 33.832109688728515,
+            "rmse": 35.22857968156958
+          }
+        }
+      },
+      "feature_importance": {
+        "owner_experience": 0.7143349841709239,
+        "vet_access": 0.13984847500478423,
+        "owner_commitment": 0.14581654082429193
+      }
+    }
+  },
+  "health_risk": {
+    "status": "success",
+    "test_samples": 5000,
+    "r2_score": 0.1985938955730887,
+    "mae": 0.2090756601699927,
+    "rmse": 0.25278360449793713,
+    "mse": 0.0638995507029695,
+    "additional_metrics": {
+      "error_distribution": {
+        "mean_error": -0.09659510026768588,
+        "std_error": 0.2336233149279001,
+        "min_error": -0.6099508926469553,
+        "max_error": 0.3982273395571588,
+        "percent_within_0_1": 0.2612,
+        "percent_within_0_2": 0.5264
+      },
+      "accuracy_by_risk_category": {
+        "Low Risk": {
+          "count": 1666,
+          "mae": 0.16132020721623289,
+          "rmse": 0.18557041826976417
+        },
+        "Moderate Risk": {
+          "count": 1666,
+          "mae": 0.11499058764517851,
+          "rmse": 0.14048593348301275
+        },
+        "High Risk": {
+          "count": 1668,
+          "mae": 0.35074611307605036,
+          "rmse": 0.37072590060832233
+        }
+      }
+    },
+    "feature_importance": {
+      "pet_species": 0.05250011877337062,
+      "weight_status": 0.42062851814084756,
+      "living_situation": 0.08485162416748034,
+      "exercise_level": 0.22658848086980554,
+      "age_years": 0.20498415100744444,
+      "conditions_count": 0.0,
+      "allergies_count": 0.010447107041051562
+    }
+  },
+  "care_capability": {
+    "status": "success",
+    "test_samples": 5000,
+    "r2_score": -0.0002289585406476391,
+    "mae": 25.018007607978536,
+    "rmse": 28.88879675970521,
+    "mse": 834.5625782235543,
+    "additional_metrics": {
+      "error_distribution": {
+        "mean_error": -0.43707721349111905,
+        "std_error": 28.88837914149712,
+        "min_error": -50.83935450993779,
+        "max_error": 49.10147900905518,
+        "percent_within_10": 0.2022,
+        "percent_within_20": 0.4018
+      },
+      "accuracy_by_capability_level": {
+        "Low Capability": {
+          "count": 1666,
+          "mae": 32.81687622998217,
+          "rmse": 34.19909756515091
+        },
+        "Medium Capability": {
+          "count": 1666,
+          "mae": 8.394455750266035,
+          "rmse": 9.621260339896766
+        },
+        "High Capability": {
+          "count": 1668,
+          "mae": 33.832109688728515,
+          "rmse": 35.22857968156958
+        }
+      }
+    },
+    "feature_importance": {
+      "owner_experience": 0.7143349841709239,
+      "vet_access": 0.13984847500478423,
+      "owner_commitment": 0.14581654082429193
+    }
+  },
+  "summary": {
+    "models_evaluated": [
+      "health_risk",
+      "care_capability"
+    ],
+    "overall_status": "success",
+    "comparison": {
+      "health_risk_r2": 0.1985938955730887,
+      "care_capability_r2": -0.0002289585406476391,
+      "better_model": "health_risk"
+    }
+  },
+  "timestamp": "2026-03-24T20:47:19.246673"
+}

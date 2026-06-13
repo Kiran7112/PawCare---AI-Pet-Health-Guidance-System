@@ -1,0 +1,34 @@
+{
+  "categorical_features": [
+    "owner_experience",
+    "vet_access",
+    "owner_commitment"
+  ],
+  "target": "care_capability_score",
+  "all_features": [
+    "owner_experience",
+    "vet_access",
+    "owner_commitment"
+  ],
+  "expected_categories": {
+    "owner_experience": [
+      "novice",
+      "experienced",
+      "expert",
+      "unknown"
+    ],
+    "vet_access": [
+      "regular",
+      "emergency only",
+      "limited",
+      "none",
+      "unknown"
+    ],
+    "owner_commitment": [
+      "casual",
+      "dedicated",
+      "obsessive",
+      "unknown"
+    ]
+  }
+}

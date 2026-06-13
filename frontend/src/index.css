@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    color-scheme: dark;
+  }
+
+  body {
+    @apply min-h-screen bg-slate-950 text-slate-200 antialiased;
+    background-image:
+      radial-gradient(900px 520px at 8% -8%, rgba(59, 107, 246, 0.16), transparent 60%),
+      radial-gradient(760px 500px at 100% 0%, rgba(124, 58, 237, 0.14), transparent 55%);
+    background-attachment: fixed;
+  }
+
+  *:focus-visible {
+    @apply outline-none ring-2 ring-brand-400 ring-offset-2 ring-offset-slate-950;
+  }
+
+  /* Dark scrollbars */
+  * {
+    scrollbar-color: #334155 transparent;
+  }
+}
+
+@layer components {
+  /* Render markdown-ish line breaks from LLM text nicely. */
+  .prose-paw p {
+    @apply mb-2 leading-relaxed text-slate-300;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-brand-400 to-violet-400 bg-clip-text text-transparent;
+  }
+
+  /* Frosted glass surface on dark. */
+  .glass {
+    @apply border border-white/10 bg-slate-900/70 backdrop-blur-md;
+  }
+
+  /* Skeleton shimmer block. */
+  .skeleton {
+    @apply relative overflow-hidden rounded-md bg-slate-800;
+  }
+  .skeleton::after {
+    content: "";
+    @apply absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/10 to-transparent;
+    animation: shimmer 1.6s infinite;
+  }
+}
+
+@layer utilities {
+  @keyframes shimmer {
+    100% {
+      transform: translateX(100%);
+    }
+  }
+}
