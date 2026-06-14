@@ -12,9 +12,9 @@ overweight Labrador with increased thirst & lethargy — was routed to the
 **Preventive Care** path: health risk **39.1%** (moderate), owner care capability
 **62/100**.
 
-**1. Assessment form (input page)**
+**1. Assessment form (input page)** — shown filled with the sample input
 
-![Assessment form](frontend/public/screenshots/01-assessment-form.png)
+![Assessment form filled with sample input](frontend/public/screenshots/01-assessment-form.png)
 
 **2. Results → Overview tab** (care-path banner + risk/care gauges)
 
@@ -829,6 +829,3 @@ The project demonstrates:
 *PawCare+ - AI-Powered Pet Health Guidance System*
 *Version 1.0.0*
 
-# PawCare---AI-Pet-Health-Guidance-System
-# PawCare-AI-Pet-Health-Guidance-System
-# PawCare-AI-Pet-Health-Guidance-System
